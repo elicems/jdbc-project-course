@@ -75,8 +75,8 @@ public class Seller implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Seller seller = (Seller) o;
-        return Objects.equals(id, seller.id);
+        Department seller = (Department) o;
+        return Objects.equals(id, seller.getId());
     }
 
     @Override
