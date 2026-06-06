@@ -18,5 +18,10 @@ public class Log {
         for(Seller obj:list){
             System.out.println(obj) ;
         }
+        System.out.println("\nTest n3 = findAll");
+        list = sellerDAO.findAll();
+        for(Seller obj:list){
+            System.out.println(obj);
+        }
     }
 }
