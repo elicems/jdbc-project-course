@@ -3,6 +3,8 @@ import dao.SellerDAO;
 import model.Department;
 import model.Seller;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public class Log {
@@ -23,5 +25,10 @@ public class Log {
         for(Seller obj:list){
             System.out.println(obj);
         }
+        System.out.println("\nTest n4 = insert");
+        Seller seller1 = new Seller(null,"greg","greg@gmail.com", LocalDate.now(),4000.0,department);
+        sellerDAO.insert(seller1);
+        System.out.println("Inserted new id = " + seller1.getId());
+
     }
 }
