@@ -30,5 +30,11 @@ public class Log {
         sellerDAO.insert(seller1);
         System.out.println("Inserted new id = " + seller1.getId());
 
+        System.out.println("\nTest n5 = update");
+        seller = sellerDAO.findById(1);
+        seller.setName("Martha Waine");
+        sellerDAO.update(seller);
+        System.out.println("Update completed");
+
     }
 }
