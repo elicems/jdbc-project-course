@@ -6,9 +6,11 @@ import model.Seller;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Log {
     public static void main(String[] args){
+        Scanner t = new Scanner(System.in);
         SellerDAO sellerDAO = DaoFactory.createSellerDao();
         System.out.println("Test n1 = sellerFindByID");
         Seller seller = sellerDAO.findById(3);
@@ -35,6 +37,13 @@ public class Log {
         seller.setName("Martha Waine");
         sellerDAO.update(seller);
         System.out.println("Update completed");
+
+        System.out.println("\nTest n6 = delete");
+        System.out.println("Enter id for delete test: ");
+        int id = t.nextInt();
+        sellerDAO.deleteById(id);
+        System.out.println("Delete completed!");
+        t.close();
 
     }
 }
